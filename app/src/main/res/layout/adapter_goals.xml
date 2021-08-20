@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.goalscheck.ui.goals.GoalsViewModel" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/small_space"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="@dimen/small_space"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/small_space">
+            <TextView
+                android:id="@+id/goalsname"
+                android:layout_margin="@dimen/small_space"
+                android:layout_width="wrap_content"
+                android:text="Hellooooo"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/mini_title"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/targettime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Oktober 2021"
+                android:layout_marginStart="@dimen/small_space"
+                android:textSize="@dimen/mini_content"
+                app:layout_constraintTop_toBottomOf="@id/goalsname"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/goalsdescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/content"
+                android:layout_marginStart="@dimen/small_space"
+                android:text="Ayo semnagat, kita pasti bisa masuk ui!"
+                app:layout_constraintTop_toBottomOf="@id/targettime"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_done_all_24px"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="@dimen/small_space"
+                android:visibility="gone"
+                android:id="@+id/done_btn"/>
+            <CheckBox
+                android:id="@+id/goalscheck"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_margin="@dimen/small_space"
+                app:layout_constraintBottom_toTopOf="@+id/buttonClick" />
+
+            <ImageButton
+                android:id="@+id/editgoals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:visibility="gone"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/round_button"
+                android:padding="2dp"
+                android:src="@drawable/ic_baseline_edit_24"
+                app:layout_constraintBottom_toTopOf="@+id/buttonClick"
+                app:layout_constraintEnd_toStartOf="@+id/goalscheck" />
+
+            <ImageButton
+                android:id="@+id/buttonClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/super_space"
+                android:visibility="gone"
+                android:background="@drawable/round_button"
+                android:padding="2dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_baseline_close_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonClick" />
+
+            <ImageView
+                android:id="@+id/buttonClick"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/small_space"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/goalsdescription"
+                android:src="@drawable/ic_view_week"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

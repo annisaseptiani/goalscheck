@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="fab_margin_custom">66dp</dimen>
+    <dimen name="super_space">30dp</dimen>
+    <dimen name="big_space">25dp</dimen>
+    <dimen name="large_space">20dp</dimen>
+    <dimen name="medium_space">15dp</dimen>
+    <dimen name="small_space">10dp</dimen>
+    <dimen name="tiny_space">5dp</dimen>
+    <dimen name="big_title">22sp</dimen>
+    <dimen name="large_title">18sp</dimen>
+    <dimen name="mini_title">15sp</dimen>
+    <dimen name="content">13sp</dimen>
+    <dimen name="mini_content">10sp</dimen>
+</resources>
